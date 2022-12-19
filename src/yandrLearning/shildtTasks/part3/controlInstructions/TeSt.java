@@ -6,15 +6,15 @@ import java.util.Scanner;
 
 public class TeSt {
     public static void main(String[] args) throws IOException {
-//        a();
+        a();
 //        equalsQ();
-////        guess4();
+//        guess4();
 //        help2();
 //        breakWithLabel3();
 //        continueEvenNum();
 //        continueOuterLoop();
 //        help3();
-        nestedLoopDiv();
+//        nestedLoopDiv();
 
     }
 

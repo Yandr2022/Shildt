@@ -6,10 +6,14 @@ public class ArrayManager {
     static void printExtremums(int[] nums) {
         int min, max;
         min = max = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            if (min > nums[i]) min = nums[i];
-            if (max < nums[i]) max = nums[i];
+        for (int val : nums) {
+            min = min > val ? val : min;
+            max = max < val ? val : max;
         }
+//        for (int i = 1; i < nums.length; i++) {
+//            if (min > nums[i]) min = nums[i];
+//            if (max < nums[i]) max = nums[i];
+//        }
         System.out.println(Arrays.toString(nums)+ "\n max = "+max+"; min = "+min);
     }
     static void bubbleSorter(int[]array) {
