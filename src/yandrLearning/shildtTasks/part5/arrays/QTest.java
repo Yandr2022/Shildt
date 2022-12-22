@@ -20,7 +20,6 @@ public class QTest {
         for (int i = 0; i < 5; i++) {
             ch = smallQ.get();
             if (ch != (char) 0) System.out.print(ch);
-
         }
     }
 }

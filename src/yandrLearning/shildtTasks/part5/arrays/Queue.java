@@ -12,7 +12,7 @@ public class Queue {
     }
 
     void put(char ch) {
-        if (putloc == q.length) {
+        if (putloc == q.length ) {
             System.out.println(" Queue is full");
             return;
         }
