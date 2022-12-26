@@ -16,7 +16,7 @@ public class Factorial {
 
 class FactTest {
     public static void main(String[] args) {
-        int[] a = {0, 1, 3, 5};
+        int[] a = {0, 1, 2, 3, 4, 5};
         for (int num : a) {
             System.out.println("Factorial " + num + " is " + Factorial.factR(num));
         }
