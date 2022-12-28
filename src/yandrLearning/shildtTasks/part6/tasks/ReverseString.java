@@ -1,21 +1,18 @@
 package yandrLearning.shildtTasks.part6.tasks;
 
 public class ReverseString {
-    static String reverseRec(String string) {
-        StringBuilder builder = new StringBuilder("");
-        int count = string.length();
-        builder.append(string.charAt(count - 1));
-        if (count == 0) return builder.append(string.charAt(count)) + "";
-        else
-            return reverseRec(string.substring(count - 1, count));
+    private StringBuilder builder = new StringBuilder();
+    String reverseRec(String string) {
+        builder.append(string.charAt(string.length() - 1));
+        return string.length() == 1 ? builder + "" : reverseRec(string.substring(0, string.length() - 1));
     }
-    static String reverse(String string){
+
+    static String reverse(String string) {
         StringBuilder builder = new StringBuilder("");
-        int count = string.length()-1;
-        for (int i = count; i >=0 ; i--) {
-            builder.append(string.charAt(count--));
+        for (int i = string.length() - 1; i >= 0; i--) {
+            builder.append(string.charAt(i));
         }
-        return builder+"";
+        return builder + "";
     }
 
     static String reverse2(String string) {
@@ -29,6 +26,9 @@ public class ReverseString {
 }
 class ReverseStringTest{
     public static void main(String[] args) {
-        System.out.println(ReverseString.reverseRec("abc"));
+        ReverseString string = new ReverseString();
+        System.out.println(string.reverseRec("abc"));
+        System.out.println(ReverseString.reverse("cba"));
+        System.out.println(ReverseString.reverse2("cba"));
     }
 }

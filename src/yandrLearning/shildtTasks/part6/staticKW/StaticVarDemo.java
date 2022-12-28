@@ -20,7 +20,7 @@ class StaticVarDemoTest {
         StaticVarDemo.x = 19;
         System.out.println("static x = " + StaticVarDemo.x + "\ndemo.y = " + demo.y
                 + ", demo.sum() = " + demo.sum() + "\ndemo1.y = " + demo1.y
-                + " demo1.sum() = " + demo1.sum());
+                + ", demo1.sum() = " + demo1.sum());
         StaticVarDemo.x = 100;
         System.out.println("static x = " + StaticVarDemo.x + "\ndemo.y = " + demo.y
                 + ", demo.sum() = " + demo.sum() + "\ndemo1.y = " + demo1.y

@@ -16,7 +16,7 @@ class OverLoad {
     }
 
     double ovlDemo(double a, double b) {
-        System.out.println("With two argument: " + a + b);
+        System.out.println("With two argument: " + a +" " + b);
         return a + b;
     }
 
@@ -33,7 +33,7 @@ class OverLoadTest {
         load.ovlDemo(2);
         resI = load.ovlDemo(4, 6);
         System.out.println("Integer result: " + resI);
-        resD = load.ovlDemo(4,6);
+        resD = load.ovlDemo(4.2,6.5);
         System.out.println("IDouble result: " + resD);
 
     }
