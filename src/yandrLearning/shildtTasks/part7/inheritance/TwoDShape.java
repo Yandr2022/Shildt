@@ -3,6 +3,13 @@ package yandrLearning.shildtTasks.part7.inheritance;
 public class TwoDShape {
     private double width;
     private double height;
+    public TwoDShape() {
+        width = height = 0;
+    }
+
+    public TwoDShape(double side) {
+        width = height = side;
+    }
 
     public TwoDShape(double width, double height) {
         this.width = width;
@@ -32,6 +39,16 @@ public class TwoDShape {
 
 class Triangle extends TwoDShape {
     String style;
+
+    public Triangle() {
+        super();
+        style = "none";
+    }
+
+    public Triangle(double side) {
+        super(side);
+        style = "blank";
+    }
 
     public Triangle(double height, double width, String style) {
         super(width, height);
@@ -67,8 +84,9 @@ class Rectangle extends TwoDShape {
 
 class Test {
     public static void main(String[] args) {
-        Triangle triangle = new Triangle(4,4,"shaded");
+        Triangle triangle = new Triangle(4);
         Triangle triangle1 = new Triangle(8,12,"contour");
+        Triangle triangle2 = new Triangle();
         Rectangle rectangle = new Rectangle();
         Rectangle rectangle1 = new Rectangle();
 
@@ -85,6 +103,10 @@ class Test {
         triangle1.showDim();
         System.out.println("area = " + triangle1.area());
         triangle1.showStyle();
+
+        triangle2.showDim();
+        System.out.println("area = " + triangle2.area());
+        triangle2.showStyle();
 
         rectangle.showDim();
         System.out.println("is Square = " + rectangle.isSquare());
