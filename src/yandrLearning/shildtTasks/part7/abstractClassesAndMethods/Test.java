@@ -112,6 +112,23 @@ class Rectangle extends TwoDShape {
         return getWidth() * getHeight();
     }
 }
+class Circle extends  TwoDShape{
+    public Circle() {
+    }
+
+    public Circle(double side, String name) {
+        super(side, name);
+    }
+
+    public Circle(Circle circle) {
+        super(circle);
+    }
+
+    @Override
+    double area() {
+        return (getWidth()/2)*(getWidth()/2) * 3.14;
+    }
+}
 
 class Test {
     public static void main(String[] args) {
