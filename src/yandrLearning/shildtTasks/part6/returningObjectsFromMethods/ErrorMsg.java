@@ -1,6 +1,7 @@
 package yandrLearning.shildtTasks.part6.returningObjectsFromMethods;
 
  class ErrorMsg {
+
     String[] msgs = {"Output error",
             "Input Error",
             "Out of disk space",
@@ -12,8 +13,8 @@ package yandrLearning.shildtTasks.part6.returningObjectsFromMethods;
 }
 class ErrorMsgTest {
     public static void main(String[] args) {
-        ErrorMsg msg = new ErrorMsg();
-        System.out.println(msg.getErrorMsg(2));
-        System.out.println(msg.getErrorMsg(10));
+        ErrorMsg err = new ErrorMsg();
+        System.out.println(err.getErrorMsg(2));
+        System.out.println(err.getErrorMsg(10));
     }
 }
