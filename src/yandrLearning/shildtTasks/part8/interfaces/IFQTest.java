@@ -17,8 +17,9 @@ public class IFQTest {
         }
 CharQueue queue = new CircularQueue(10);
         for (int i = 0; i < 20; i++) {
-            queue.put((char) (ch +i));
-            System.out.println(queue.get());
+            queue.put((char) ('a' + i));
+            char ch1 =queue.get();
+            System.out.print(ch1);
         }
     }
 }
@@ -69,11 +70,12 @@ class CircularQueue implements CharQueue {
 
     @Override
     public void put(char ch) {
-        if ((putloc + 1 == getloc) | ((putloc == q.length - 1) & (getloc == 0))) {
+        if (putloc + 1 == getloc | ((putloc == q.length - 1) & (getloc == 0))) {
             System.out.println("Queue is full");
             return;
         }
         q[putloc++] = ch;
+        if (putloc == q.length) putloc = 0;
     }
 
     @Override
