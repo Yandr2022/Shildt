@@ -1,4 +1,4 @@
-package yandrLearning.shildtTasks.part10;
+package yandrLearning.shildtTasks.part10.binaryStream;
 
 import java.io.IOException;
 import java.util.Arrays;
