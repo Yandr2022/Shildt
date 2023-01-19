@@ -47,7 +47,6 @@ class Help {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             builder.append(reader.readLine());
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
