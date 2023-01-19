@@ -16,7 +16,8 @@ public class UsePriorityForThreads {
         priority3.thrd.start();
         priority4.thrd.start();
 
-        try {  priority.thrd.join();
+        try {
+            priority.thrd.join();
         priority1.thrd.join();
         priority2.thrd.join();
         priority3.thrd.join();
@@ -47,7 +48,7 @@ class Priority implements Runnable{
 
     @Override
     public void run() {
-        while (!stop&&count < 1000){
+        while (stop==false&&count < 10_000_000){
             count++;
             currentName =currentName.compareTo(thrd.getName())!=0? thrd.getName() : currentName;
             System.out.println(currentName + " is running");
